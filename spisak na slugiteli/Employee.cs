@@ -76,7 +76,7 @@ namespace spisak_na_slugiteli
             }
             set
             {
-                if (value == null)
+                if (value == null || value=="")
                 {
                     Console.WriteLine("Greshka!");
                     return;
@@ -105,24 +105,20 @@ namespace spisak_na_slugiteli
             }
         }
 
-        private int age;
+        private string age;
 
 
-        public int Age
+        public string Age 
         {
             get { return age; }
             set 
             { 
-                if (value==null || value==0)
+                
+                if (value==null || value=="0" || value=="")
                 {
-                    age =-1;
+                    age ="-1";
                 }
-                //dopylnenie :)
-                if (value<16)
-                {
-                    Console.WriteLine("Greshni godini");
-                    return;
-                }
+                
                 else
                 {
                     age = value;

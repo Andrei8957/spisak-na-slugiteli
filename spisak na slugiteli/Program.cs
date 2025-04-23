@@ -30,7 +30,7 @@ namespace spisak_na_slugiteli
                 Console.Write("Wywedi El. posha - ");
                 emp.ElPosha = Console.ReadLine();
                 Console.Write("Wywedi godini - ");
-                emp.Age = int.Parse(Console.ReadLine());
+                emp.Age = Console.ReadLine();
                 Console.WriteLine("----------------------");
                 persons.Add(emp);
 
@@ -42,7 +42,7 @@ namespace spisak_na_slugiteli
             string OtdelNaiVisokaZaplata = "";
             for (int i = 0; i < persons.Count; i++)
             {
-                double suma = 0;
+                double suma = persons[i].Zaplata;
                 int count = 1;
                 string segashenOtdel;
                 double avg = 0;
@@ -51,7 +51,7 @@ namespace spisak_na_slugiteli
                     if (persons[i].Otdel == persons[j].Otdel)
                     {
 
-                        suma = persons[i].Zaplata + persons[j].Zaplata;
+                        suma +=persons[j].Zaplata;
                         count++;
                     }
                 }
