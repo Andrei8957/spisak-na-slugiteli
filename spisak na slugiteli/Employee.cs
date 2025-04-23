@@ -114,7 +114,7 @@ namespace spisak_na_slugiteli
             set 
             { 
                 
-                if (value==null || value=="0" || value=="")
+                if (value==null || value=="0" || value==" ")
                 {
                     age ="-1";
                 }
